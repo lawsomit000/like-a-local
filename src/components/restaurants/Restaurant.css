@@ -1,0 +1,26 @@
+.restaurantList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+.restaurant {
+    border: 1px blue solid;
+    margin: 10px;
+    color: blue;
+    font-size: small;
+    
+}
+form {
+    max-width: 1200px;
+    
+}
+.btn {
+    margin: 1em;
+}
+.form-group {
+    margin: .5em;
+}
+.restaurantDetail {
+    color: black;
+}
