@@ -21,9 +21,9 @@ export const ApplicationViews = () => {
                 <Route exact path ="/restaurants/create">
                     < RestaurantForm />
                 </Route>
-
-                <Route exact path="restaurants/detail/:restaurantId(\d+)">
-                    <RestaurantDetail />
+                    
+                <Route path="/restaurants/detail/:restaurantId(\d+)">
+                    < RestaurantDetail />
                 </Route>
             </RestaurantProvider>
         </>

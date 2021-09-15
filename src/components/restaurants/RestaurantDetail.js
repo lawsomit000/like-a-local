@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom"
 export const RestaurantDetail = () => {
     const { restaurants } = useContext(RestaurantContext)
     const [ restaurant, setRestaurant ] = useState()
+    console.log('hello')
 
     const { restaurantId } = useParams();
 
@@ -17,7 +18,8 @@ export const RestaurantDetail = () => {
 
     return (
         <section className="restaurantDetail">
-            <h3>${restaurant.name}</h3>
+            <h3>Hello </h3>
         </section>
+
     )
 }

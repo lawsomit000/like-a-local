@@ -32,12 +32,6 @@ export const RestaurantProvider = (props) => {
         .then(getRestaurants)
     }
 
-    <RestaurantProvider>
-        <Route exact path="/restaurants/detail/:restaurantId(\d+)">
-            <RestaurantDetail />
-        </Route>
-    </RestaurantProvider>
-
     // You return a context provider which has the
     //     functions above as keys. This
     //     allows any child elements to access them.
