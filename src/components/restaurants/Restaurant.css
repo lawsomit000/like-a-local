@@ -27,3 +27,12 @@ form {
 h3{
     color: black;
 }
+.restaurantDetail {
+    margin: auto;
+    width: 50%;
+    border: 1px black solid;
+    padding: 10px;
+}
+.reactImage {
+    min-width: 100%;
+}

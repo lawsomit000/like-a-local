@@ -1,6 +1,5 @@
 import React, {useState, createContext} from "react"
 import { Route } from "react-router-dom"
-import { RestaurantDetail } from "./RestaurantDetail"
 
 // The context is imported and used by individual components that need data
 export const RestaurantContext = createContext()
