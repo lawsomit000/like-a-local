@@ -1,0 +1,38 @@
+.attractionList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+.attraction {
+    border: 1px blue solid;
+    margin: 10px;
+    color: blue;
+    font-size: small;
+    
+}
+form {
+    max-width: 1200px;
+    
+}
+.btn {
+    margin: 1em;
+}
+.form-group {
+    margin: .5em;
+}
+.attractionDetail {
+    color: black;
+}
+h3{
+    color: black;
+}
+.attractionDetail {
+    margin: auto;
+    width: 50%;
+    border: 1px black solid;
+    padding: 10px;
+}
+.reactImage {
+    min-width: 100%;
+}
