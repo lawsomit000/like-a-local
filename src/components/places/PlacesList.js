@@ -40,10 +40,7 @@ export const PlacesList = () => {
                                     <Card className="place" style={{ width: '18rem' }}>
                                         <Card.Img variant="top" className="cardImg" src={place.imageURL} />
                                         <Card.Body>
-                                            <Card.Title>{place.name}</Card.Title>
-                                            <Card.Text>
-                                                {place.description}
-                                            </Card.Text>
+                                            <Card.Title>{place.cityName}</Card.Title>
                                             <Button onClick={() => {
                                                 history.push(`/places/detail/${place.id}`)
                                             }} type="button" variant="outline-primary">View</Button>

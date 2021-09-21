@@ -8,7 +8,8 @@ export const PlacesForm = () => {
 
 
     const [place, setPlace] = useState({
-        name: "", 
+        cityName: "", 
+        cityState: "",
         description: "",
         // location: "",
         imageURL: "",
@@ -33,7 +34,8 @@ export const PlacesForm = () => {
 
         //I need to add location and user context so we can pull that data in
         const newPlace = {
-            name: place.name, 
+            cityName: place.cityName, 
+            cityState: place.cityState,
             description: place.description,
             // location: locationId,
             imageURL: place.imageURL
@@ -49,8 +51,14 @@ return (
       <h2 className="placeForm__title">New Place</h2>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" required autoFocus className="form-control" placeholder="Place name" value={place.name} onChange={handleControlledInputChange} />
+          <label htmlFor="name">City Name:</label>
+          <input type="text" id="cityName" required autoFocus className="form-control" placeholder="City Name" value={place.cityName} onChange={handleControlledInputChange} />
+        </div>
+      </fieldset>
+      <fieldset>
+        <div className="form-group">
+          <label htmlFor="name">State:</label>
+          <input type="text" id="cityState" required autoFocus className="form-control" placeholder="State" value={place.cityState} onChange={handleControlledInputChange} />
         </div>
       </fieldset>
       <fieldset>
