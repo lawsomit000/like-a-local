@@ -3,7 +3,7 @@ import { PlacesContext } from "./PlacesProvider"
 import "./Places.css"
 import { useHistory } from 'react-router-dom'
 
-export const PlaceForm = () => { 
+export const PlacesForm = () => { 
     const { addPlace, getPlaces } = useContext(PlacesContext)
 
 

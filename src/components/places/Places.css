@@ -1,0 +1,21 @@
+.placeContainer {
+    max-width: auto;
+}
+.placeList { 
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.place {
+    margin: 10px;
+    height: 320px;
+}
+.cardImg {
+    height: 200px;
+}
+.placeHeader {
+   
+}
+.placeBtn {
+    
+}

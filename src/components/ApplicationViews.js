@@ -1,7 +1,8 @@
 import React from "react"
 import { Route } from "react-router-dom"
+import { PlacesForm } from "./places/PlacesForm"
 import { PlacesList } from "./places/PlacesList"
-import { PlacesContext } from "./places/PlacesProvider"
+import { PlaceProvider } from "./places/PlacesProvider"
 import { RestaurantDetail } from "./restaurants/RestaurantDetail"
 import { RestaurantForm } from "./restaurants/RestaurantForm"
 import { RestaurantList } from "./restaurants/RestaurantList"
@@ -41,11 +42,15 @@ export const ApplicationViews = () => {
                 </Route>
             </AttractionsProvider>
 
-            <PlacesContext >
+            <PlaceProvider >
                 <Route exact path ="/places">
                     <PlacesList />
                 </Route>
-            </PlacesContext>
+                
+                <Route exact path ="/places/create">
+                    <PlacesForm />
+                </Route>
+            </PlaceProvider>
         </>
     )
 }
