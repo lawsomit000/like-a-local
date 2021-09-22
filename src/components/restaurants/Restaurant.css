@@ -79,3 +79,9 @@ h2, h3{
 .slickImg {
     height: 250px;
 }
+.sliderCardBtn {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}

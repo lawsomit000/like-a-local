@@ -1,0 +1,20 @@
+.mastheadContainer {
+    display: flex;
+    flex-flow: row, wrap;
+    align-items: center;
+    align-content: center;
+    padding: 40px;
+}
+.mastheadText {
+    display: inline-block;
+    width: 33%;
+    height: 300px;
+}
+.mastheadImg {
+    height: 100%;
+    max-width: 66%;
+    display: block;
+}   
+h2 {
+    padding-bottom: 40px;
+}

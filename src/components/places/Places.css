@@ -19,3 +19,51 @@
 .placeBtn {
     
 }
+
+/* React Slick CSS  */
+
+.slickContainer {
+    max-width: 1400px;
+    display: block;
+    align-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+.sliderHead{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.slickSlider {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 25px;
+    height: 500px;
+    align-items: center;
+    align-content: center;
+}
+.slick-prev {
+    left: 3% !important;
+    z-index: 1;
+  }
+.slick-next {
+    right: 3% !important;
+    z-index: 1;
+    size: 100px;
+  }
+.slickCard {
+    flex-basis: auto;
+    height: 470px;
+    padding: 10px;
+}
+.slickImg {
+    height: 250px;
+}
+.sliderCardBtn {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}

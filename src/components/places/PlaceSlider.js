@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react"
-import { RestaurantContext } from "./RestaurantProvider"
-import "./Restaurant.css"
+import { PlacesContext } from "./PlacesProvider"
+import "./Places.css"
 import { useHistory } from "react-router-dom"
 import "react-multi-carousel/lib/styles.css";
 import "slick-carousel/slick/slick.css";
@@ -10,11 +10,11 @@ import Slider from "react-slick"
 import { NextArrow, PrevArrow } from "../utilities/SliderArrows";
 
 
-export const RestaurantSlider = () => {
+export const PlacesSlider = () => {
 
-    const { restaurants, getRestaurants } = useContext(RestaurantContext)
+    const { places, getPlaces } = useContext(PlacesContext)
     const history = useHistory()
-    const { deleteRestaurant } = useContext(RestaurantContext)
+    const { deletePlace } = useContext(PlacesContext)
 
     var settings = {
         dots: true,
@@ -28,11 +28,11 @@ export const RestaurantSlider = () => {
     };
 
     useEffect(() => {
-        getRestaurants()
+        getPlaces()
     }, [])
 
-    const handleDelete = (restaurant) => {
-        deleteRestaurant(restaurant.id)
+    const handleDelete = (place) => {
+        deletePlace(place.id)
             .then(() => {
             })
     }
@@ -41,29 +41,25 @@ export const RestaurantSlider = () => {
         <>
             <div className="slickContainer">
                 <div className="sliderHead">
-                    <h2>My Restaurants</h2>
+                    <h2>My Places</h2>
                     <Button onClick={
-                        () => history.push("/restaurants/create")
+                        () => history.push("/places/create")
                     }>
-                        Add Restaurant
+                        Add Place
                     </Button>
                 </div>
                 <Slider className="slickSlider" {...settings}>
                     {
-                        restaurants.map(restaurant => {
+                        places.map(place => {
                             return (
                                 <Card className="slickCard" style={{ width: '18rem' }}>
-                                    <Card.Img className="slickImg" variant="top" src={restaurant.imageURL} />
+                                    <Card.Img className="slickImg" variant="top" src={place.imageURL} />
                                     <Card.Body>
-                                        <Card.Title>{restaurant.name}</Card.Title>
-                                        <Card.Text>
-                                            {restaurant.description}
-                                        </Card.Text>
+                                        <Card.Title>{place.cityName}</Card.Title>
                                         <div className="sliderCardBtn">
                                         <Button onClick={() => {
-                                            history.push(`/restaurants/detail/${restaurant.id}`)
+                                            history.push(`/places/detail/${place.id}`)
                                         }} type="button" variant="outline-primary">View</Button>
-                                        <Button onClick={() => handleDelete(restaurant)} type="button" variant="outline-primary">Delete</Button>
                                         </div>
                                     </Card.Body>
                                 </Card>

@@ -12,14 +12,24 @@ import { AttractionsForm } from "./things-to-do/AttractionsForm"
 import { AttractionsList } from "./things-to-do/AttractionsList"
 import { AttractionsProvider } from "./things-to-do/AttractionsProvider"
 import { RestaurantSlider } from "./restaurants/RestaurantSlider"
+import { PlacesSlider } from "./places/PlaceSlider"
+import { AttractionsSlider } from "./things-to-do/AttractionsSlider"
+import { HomeMasthead } from "./utilities/HomeMasthead"
 
 export const ApplicationViews = () => {
     return (
         <>
             <RestaurantProvider>
+                <PlaceProvider>
+                <AttractionsProvider>
                 <Route exact path="/">
-                    
+                    <HomeMasthead />
+                    <RestaurantSlider />
+                    <PlacesSlider />
+                    <AttractionsSlider />
                 </Route>
+                </AttractionsProvider>
+                </PlaceProvider>
             </RestaurantProvider>
 
             <RestaurantProvider>
@@ -30,10 +40,6 @@ export const ApplicationViews = () => {
                     < RestaurantForm />
                 </Route>
 
-                <Route exact path ="/restaurants/slider">
-                    < RestaurantSlider />
-                </Route>
-                    
                 <Route path="/restaurants/detail/:restaurantId(\d+)">
                     < RestaurantDetail />
                 </Route>
