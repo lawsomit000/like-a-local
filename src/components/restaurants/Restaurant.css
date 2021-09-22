@@ -24,8 +24,10 @@ form {
 .restaurantDetail {
     color: black;
 }
-h3{
+h2, h3{
     color: black;
+    margin-left: 25px;
+    margin-top: 100px;
 }
 .restaurantDetail {
     margin: auto;
@@ -35,4 +37,45 @@ h3{
 }
 .reactImage {
     min-width: 100%;
+}
+
+/* React Slick CSS  */
+
+.slickContainer {
+    max-width: 1400px;
+    display: block;
+    align-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.sliderHead{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.slickSlider {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 25px;
+    height: 500px;
+    align-items: center;
+    align-content: center;
+}
+.slick-prev {
+    left: 3% !important;
+    z-index: 1;
+  }
+.slick-next {
+    right: 3% !important;
+    z-index: 1;
+    size: 100px;
+  }
+.slickCard {
+    flex-basis: auto;
+    height: 470px;
+    padding: 10px;
+}
+.slickImg {
+    height: 250px;
 }

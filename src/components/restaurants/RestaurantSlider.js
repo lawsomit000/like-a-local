@@ -8,10 +8,11 @@ import "slick-carousel/slick/slick-theme.css";
 import { Card, Button } from 'react-bootstrap';
 import Slider from "react-slick"
 import { Component } from "react";
+import { NextArrow, PrevArrow } from "../utilities/SliderArrows";
 
 
 export const RestaurantSlider = () => {
-    
+
     const { restaurants, getRestaurants } = useContext(RestaurantContext)
     const history = useHistory()
     const { deleteRestaurant } = useContext(RestaurantContext)
@@ -22,7 +23,9 @@ export const RestaurantSlider = () => {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
-        arrows: true
+        nextArrow: < NextArrow />,
+        prevArrow: < PrevArrow />
+
     };
 
     useEffect(() => {
@@ -37,12 +40,21 @@ export const RestaurantSlider = () => {
 
     return (
         <>
-            <Slider {...settings}>
-                {
-                    restaurants.map(restaurant => {
-                        return (
-                            <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={restaurant.imageURL} />
+            <div className="slickContainer">
+                <div className="sliderHead">
+                    <h2>My Restaurants</h2>
+                    <Button onClick={
+                        () => history.push("/restaurants/create")
+                    }>
+                        Add Restaurant
+                    </Button>
+                </div>
+                <Slider className="slickSlider" {...settings}>
+                    {
+                        restaurants.map(restaurant => {
+                            return (
+                                <Card className="slickCard" style={{ width: '18rem' }}>
+                                    <Card.Img className="slickImg" variant="top" src={restaurant.imageURL} />
                                     <Card.Body>
                                         <Card.Title>{restaurant.name}</Card.Title>
                                         <Card.Text>
@@ -54,10 +66,11 @@ export const RestaurantSlider = () => {
                                         <Button onClick={() => handleDelete(restaurant)} type="button" variant="outline-primary">Delete</Button>
                                     </Card.Body>
                                 </Card>
-                        )
-                    })
-                }
-            </Slider>
+                            )
+                        })
+                    }
+                </Slider>
+            </div>
             );
         </>
     )
